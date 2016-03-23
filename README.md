@@ -27,6 +27,9 @@ Customize the icons with:
     set -g @spotify_playing_icon ">"
     set -g @spotify_paused_icon "="
 
+    # optional: defaults to `paused_icon`
+    set -g @spotify_stopped_icon "X"
+
 ### Screenshots
 
 ![status](/screenshots/spotify-status.png)<br/>
