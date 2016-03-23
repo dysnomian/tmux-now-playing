@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "$CURRENT_DIR/helpers.sh"
+
 print_spotify_album() {
-  local album=$(osascript -e 'tell application "Spotify" to album of current track as string')
-  echo "${album}"
+  current_track_property "album"
 }
 
 main() {

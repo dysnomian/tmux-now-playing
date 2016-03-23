@@ -15,3 +15,17 @@ set_tmux_option() {
   tmux set-option -gq "$option" "$value"
 }
 
+current_track_property() {
+  local prop="${1}"
+read -r -d '' SCRIPT <<'END'
+set theApp to "Spotify"
+
+if application theApp is running then
+  tell application "Spotify"
+    return %s of current track as string
+  end tell
+end if
+END
+
+osascript -e "$(printf "${SCRIPT}" "$prop")"
+}

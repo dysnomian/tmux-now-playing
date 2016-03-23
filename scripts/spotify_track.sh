@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "$CURRENT_DIR/helpers.sh"
+
 print_spotify_track() {
-  local track=$(osascript -e 'tell application "Spotify" to name of current track as string')
-  echo "${track}"
+  current_track_property "name"
 }
 
 main() {
