@@ -2,6 +2,8 @@
 
 **Please note that this is still in the early stages of development. It might not work at all for you, and it doesn't work out of the box for anyone, including me.** However, if you'd like to leave issues or PRs, I'd be happy to review and merge them!
 
+![screenshots/itunes_status.png]()
+
 ## The Goal
 
 Since I get bored with my music easily, my goal is to have a Tmux player status that works on a variety of players, including iTunes, Spotify, and Pandora. Ideally, the API should make it simple (if not easy) for users to extend with new players.
@@ -12,6 +14,7 @@ At the moment, this only works with iTunes on macOS, since that's what I'm using
 
 - Tmux 2.1 or higher
 - macOS (tested with Mojave only, but it seems like it would work with other versions too)
+- A [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) terminal font set. (Updating this is on the [road map](#road-map).
 
 ## Usage
 
@@ -40,7 +43,7 @@ Hit `prefix + I` to fetch the plugin and source it.
 
 Clone the repo:
 
-    $ git clone https://github.com/robhurring/tmux-now-playing' ~/clone/path
+    $ git clone https://github.com/dysnomian/tmux-now-playing' ~/clone/path
 
 Add this line to the bottom of `.tmux.conf`:
 
@@ -51,7 +54,7 @@ Reload TMUX environment:
     # type this in terminal
     $ tmux source-file ~/.tmux.conf
 
-## Road map
+# Road map
 
  - [ ] Performance benchmarks
  - [ ] Screenshots
@@ -66,10 +69,12 @@ Reload TMUX environment:
  - [ ] Track time and track progress
  - [ ] Color track progress bar
 
-### Contributing
+## Contributing
 
-PRs and issues are gladly accepted! See the CONTRIBUTING.md doc for guidelines.
+PRs and issues are gladly accepted! See the [contributing doc](CONTRIBUTING.md) for guidelines.
 
-## Credits
+# Credits
 
 This is based heavily on @robhurring's [tmux-spotify](https://github.com/robhurring/tmux-spotify). Thanks Rob!
+
+Everything here is available under the [GPL v3 License](LICENSE.md). 
